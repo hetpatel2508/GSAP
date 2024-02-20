@@ -57,7 +57,7 @@
     align-items: center;
   }
   
-  .c_all {
+  #content>div {
     font-size: 125px;
     display: flex;
     justify-content: center;
@@ -86,4 +86,13 @@
     bottom: 12%;
     right: 5%;
     border-radius: 30px;
+  }
+  
+  #content>h3{
+    position: absolute;
+    bottom: 5%;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
   }

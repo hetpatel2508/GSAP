@@ -18,3 +18,10 @@ time_line.from("#content>img",{
     scale:0.7,
     opacity:0,
 })
+
+time_line.from("#content>h3",{
+    y:-20,
+    opacity:0,
+    yoyo:true,
+    repeat:-1,
+})
