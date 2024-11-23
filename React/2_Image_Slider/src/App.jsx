@@ -35,15 +35,13 @@ export default function App() {
   const handleNext = () => {
 
     let firstChild = imgRefs.current.firstElementChild;
-    // firstChild.style.trantion = `min-width 0.5s ease-in-out`;
-    // firstChild.style.transitionDelay = `0.5s`;
     firstChild.style.minWidth = `0%`; 
 
     setTimeout(() => {
       imgRefs.current.removeChild(firstChild);  
       imgRefs.current.appendChild(firstChild);
       firstChild.style.minWidth = `100%`;
-    },600)
+    },1000)
 
       gsap.fromTo(
         circleRef.current,
@@ -99,13 +97,9 @@ export default function App() {
         <div id="image">
           <div id="sub_img" ref={imgRefs}>
             {Peoples.map((person, index) => (
-              <div
-                key={index}
-                // ref={(el) => (imgRefs.current[index] = el)}
-                id={`img${index}`}
-               >
+              <div key={index} id={`img${index}`} >
                 <img src={person.image} alt="" />
-               </div> 
+              </div> 
             ))}
           </div>
         </div>
