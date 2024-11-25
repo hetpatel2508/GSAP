@@ -1,0 +1,133 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.temp {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 30px;
+  border-bottom: 1px solid cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.main {
+  width: 78%;
+  height: 100vh;
+  margin-left: 11%;
+  /* background-color: #4356CF; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.img {
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#info {
+  width: 33%;
+  height: 100vh;
+  /* background-color: #123456; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#info > #holder {
+  width: 100%;
+  height: 46%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#info > #holder > #content1 {
+  width: 100%;
+  height: 45%;
+  /* background-color: #123456; */
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 555;
+  /* letter-spacing: 1px; */
+  line-height: 40px;
+}
+
+#info > #holder > #content2 {
+  width: 100%;
+  height: 20%;
+  /* background-color: #696696; */
+  margin-bottom: 28px;
+  line-height: 20px;
+  color: gray;
+}
+
+#info > #holder > #content3 {
+  width: 100%;
+  height: 15%;
+  /* background-color: #798878; */
+  transform: translateX(-15%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#sub_content1 {
+  min-width: 20%;
+  height: 100%;
+  margin-top: 8%;
+  margin-right: 10px;
+  color: gray;
+}
+
+#sub_content2 {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+#sub_content3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #5168ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery {
+  width: 56%;
+  height: 100vh;
+  /* background-color: #8986df; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#gallery > #img1 {
+  width: 50%;
+  height: 62%;
+  align-self: flex-end;
+}
+
+#gallery > #img2 {
+  width: 47%;
+  height: 48%;
+}
