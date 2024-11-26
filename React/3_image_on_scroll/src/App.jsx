@@ -114,6 +114,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      <div className="temp" id="img_hold"></div>
       <div className="temp">Hello World..!</div>
     </div>
   );
