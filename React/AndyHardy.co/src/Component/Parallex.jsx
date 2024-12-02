@@ -1,55 +1,10 @@
 import React from 'react';
 import '../App.css';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Parallex({ infoChild }) {
   const parent = React.useRef();
   const img = React.useRef();
   const logo = React.useRef();
-
-  React.useEffect(() => {
-    let ctx = gsap.context(() => {
-      let t1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: parent.current,
-          start: 'top top',
-          end: '5000 top',
-          markers: true,
-          scrub: true,
-          // pin: true,
-        },
-      });
-
-      t1.to(
-        img.current,
-        {
-          y: 10,
-          // opacity: 0,
-          duration: 0.3,
-          ease: 'power4.inOut',
-        },
-        0,
-      );
-
-      t1.to(
-        logo.current,
-        {
-          // y: '100%',
-          opacity: 0,
-          duration: 0.3,
-          ease: 'power4.inOut',
-        },
-        0,
-      );
-      // })
-    });
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <div className="w-[100%]  relative overflow-hidden" ref={parent}>

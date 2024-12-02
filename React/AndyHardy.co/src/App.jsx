@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import Navbar from './Component/Navbar';
 import Logo from './Component/Logo';
 import Parallex from './Component/Parallex';
+import Gallery from './Component/Gallery';
 
 gsap.registerPlugin(useGSAP);
 
@@ -13,6 +14,7 @@ export default function App() {
   const infoChild = React.useRef();
   const navbar = React.useRef();
   const LOGO = React.useRef();
+  const GalleryParent = React.useRef();
 
   useGSAP(
     () => {
@@ -63,6 +65,14 @@ export default function App() {
         },
         2,
       );
+
+      t1.to(
+        '#pardo',
+        {
+          display: 'none',
+        },
+        3,
+      );
     },
     { scope: parent },
   );
@@ -71,7 +81,7 @@ export default function App() {
     <div className="">
       <div ref={parent}>
         <Navbar />
-        <Logo MyRef={navbar} LOGO={LOGO} />
+        <Logo MyRef={navbar} LOGO={LOGO} GalleryParent={GalleryParent} />
 
         {/* <div
           id="pardo"
@@ -86,8 +96,10 @@ export default function App() {
 
         <Parallex infoChild={infoChild} />
 
-        <div className="w-[100%] h-screen bg-[#000000] "></div>
-        <div className="w-[100%] h-screen bg-red-200"></div>
+        <Gallery LOGO={LOGO} GalleryParent={GalleryParent} />
+        <div className="w-[100%] min-h-[103vh] bg-black  pt-[140px]">
+          <div className="w-[100%] h-[100%] flex flex-row items-center justify-center bg-pink-300"></div>
+        </div>
       </div>
     </div>
   );
