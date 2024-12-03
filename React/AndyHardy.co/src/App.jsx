@@ -6,6 +6,8 @@ import Navbar from './Component/Navbar';
 import Logo from './Component/Logo';
 import Parallex from './Component/Parallex';
 import Gallery from './Component/Gallery';
+import Intro from './Component/Intro';
+import Grid from './Component/Grid';
 
 gsap.registerPlugin(useGSAP);
 
@@ -97,9 +99,9 @@ export default function App() {
         <Parallex infoChild={infoChild} />
 
         <Gallery LOGO={LOGO} GalleryParent={GalleryParent} />
-        <div className="w-[100%] min-h-[103vh] bg-black  pt-[140px]">
-          <div className="w-[100%] h-[100%] flex flex-row items-center justify-center bg-pink-300"></div>
-        </div>
+        <Intro />
+        <div className="w-full h-[100px] bg-black"></div>
+        <Grid />
       </div>
     </div>
   );
