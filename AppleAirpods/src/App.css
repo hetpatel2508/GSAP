@@ -1,0 +1,34 @@
+h1 {
+  position: fixed;
+  top: 50%;
+  width: 100vw;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 10vw, 13.5rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background: #000;
+  color: white;
+  height: 500vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-height: 100vh;
+  max-width: 100vw;
+  transform: translate(-50%, -50%);
+}
